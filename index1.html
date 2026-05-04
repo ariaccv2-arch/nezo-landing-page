@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEZO PARFUME | Simplicity in Luxury</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-bg: #0a0a0a;
+            --card-bg: #141414;
+            --text-gray: #a0a0a0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(0,0,0,0.8);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--primary-gold); }
+
+        .btn-order {
+            background: var(--primary-gold);
+            color: black;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-hero-bg.jpg'); /* Ganti bg hero */
+            background-size: cover;
+        }
+
+        .hero-content { max-width: 600px; }
+        
+        .hero-content h4 { color: var(--primary-gold); letter-spacing: 3px; margin-bottom: 10px; }
+
+        .hero-content h1 { font-size: 64px; line-height: 1.1; margin-bottom: 20px; }
+
+        .hero-content h1 span { color: var(--primary-gold); font-style: italic; }
+
+        .hero-btns { display: flex; gap: 20px; margin-top: 30px; }
+
+        .btn-gold { background: var(--primary-gold); border: none; padding: 15px 30px; cursor: pointer; font-weight: bold; }
+
+        .btn-outline { background: transparent; border: 1px solid var(--white); color: var(--white); padding: 15px 30px; cursor: pointer; }
+
+        /* --- Features Bar --- */
+        .features-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            padding: 40px 8%;
+            background: #000;
+            border-bottom: 1px solid #222;
+        }
+
+        .feat-item { display: flex; align-items: center; gap: 15px; }
+        .feat-item i { color: var(--primary-gold); font-size: 24px; }
+        .feat-item h5 { font-size: 14px; }
+        .feat-item p { font-size: 12px; color: var(--text-gray); }
+
+        /* --- Products Section --- */
+        .products { padding: 80px 8%; text-align: center; }
+        
+        .section-title { color: var(--primary-gold); text-transform: uppercase; letter-spacing: 2px; font-size: 14px; }
+
+        .products h2 { font-size: 36px; margin: 10px 0 40px; }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .product-card:hover { border-color: var(--primary-gold); transform: translateY(-5px); }
+
+        .product-card img { width: 100%; margin-bottom: 15px; border-radius: 5px; }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #222;
+            font-size: 10px;
+            border-radius: 3px;
+            margin-top: 10px;
+            color: var(--primary-gold);
+        }
+
+        /* --- Testimonials --- */
+        .testimonials { padding: 80px 8%; background: #080808; }
+
+        .testi-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .testi-card {
+            background: #111;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 3px solid var(--primary-gold);
+        }
+
+        .stars { color: var(--primary-gold); margin-bottom: 15px; }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 8%;
+            background: #000;
+            border-top: 1px solid #222;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo h2 { letter-spacing: 3px; margin-bottom: 10px; }
+        .footer-links h4 { margin-bottom: 20px; font-size: 16px; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 10px; font-size: 14px; color: var(--text-gray); }
+
+        @media (max-width: 768px) {
+            .features-bar, .testi-container, footer { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">NEZO</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Our Fragrances</a>
+            <a href="#">About</a>
+            <a href="#">Reviews</a>
+            <a href="#">FAQ</a>
+        </div>
+        <a href="#" class="btn-order"><i class="fas fa-shopping-bag"></i> Order Now</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h4>EXTRAIT DE PARFUM</h4>
+            <h1>Simplicity in <span>Luxury.</span></h1>
+            <p>Wewangian premium dengan konsentrasi tinggi yang tahan lama, elegan, dan berkesan.</p>
+            <div class="hero-btns">
+                <button class="btn-gold">Beli Sekarang</button>
+                <button class="btn-outline">Lihat Varian &rarr;</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="features-bar">
+        <div class="feat-item">
+            <i class="fas fa-flask"></i>
+            <div>
+                <h5>Extrait de Parfum</h5>
+                <p>Konsentrasi tinggi</p>
+            </div>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-bottle-droplet"></i>
+            <div>
+                <h5>50ml Premium Bottle</h5>
+                <p>Desain eksklusif</p>
+            </div>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-venus-mars"></i>
+            <div>
+                <h5>Unisex</h5>
+                <p>Untuk pria & wanita</p>
+            </div>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-shield-check"></i>
+            <div>
+                <h5>Quality Guarantee</h5>
+                <p>Jaminan kualitas</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="products">
+        <p class="section-title">Our Fragrances</p>
+        <h2>Temukan Wewangian <span>Favoritmu</span></h2>
+        
+        <div class="product-grid">
+            <!-- Contoh 1 Produk -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x300/1a1a1a/c5a059?text=Fresh+Pulse" alt="Fresh Pulse">
+                <h4>Fresh Pulse</h4>
+                <p style="font-size: 12px; color: #888;">Fresh, clean & energetic</p>
+                <span class="tag">FRESH</span>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x300/1a1a1a/c5a059?text=Ocean+Breeze" alt="Ocean Breeze">
+                <h4>Ocean Breeze</h4>
+                <p style="font-size: 12px; color: #888;">Fresh laut, ringan & relax</p>
+                <span class="tag">AQUATIC</span>
+            </div>
+            <!-- Duplikasi produk lainnya sesuai gambar -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x300/1a1a1a/c5a059?text=Rose+Elixir" alt="Rose Elixir">
+                <h4>Rose Elixir</h4>
+                <p style="font-size: 12px; color: #888;">Floral elegan & lembut</p>
+                <span class="tag">FLORAL</span>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/200x300/1a1a1a/c5a059?text=Scandal" alt="Scandal">
+                <h4>Scandal</h4>
+                <p style="font-size: 12px; color: #888;">Bold & seductive</p>
+                <span class="tag">WOODY</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <p class="section-title" style="text-align: center;">What They Say</p>
+        <h2 style="text-align: center;">Kata Mereka Tentang <span>NEZO</span></h2>
+        <div class="testi-container">
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Aromanya premium banget, tahan lama seharian. Fresh Pulse jadi signature scent gue sekarang!"</p>
+                <h5 style="margin-top: 20px;">Raka Putra</h5>
+                <small>Verified Buyer</small>
+            </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Scandal wanginya gila, banyak yang nanya parfum apa. Worth it banget!"</p>
+                <h5 style="margin-top: 20px;">Indra Wijaya</h5>
+                <small>Verified Buyer</small>
+            </div>
+            <div class="testi-card">
+                <div class="stars">★★★★★</div>
+                <p>"Ocean Breeze favorit banget buat sehari-hari, segar dan gak bikin pusing."</p>
+                <h5 style="margin-top: 20px;">Dimas Ardiansyah</h5>
+                <small>Verified Buyer</small>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">
+            <h2>NEZO</h2>
+            <p>Simplicity in Luxury.</p>
+        </div>
+        <div class="footer-links">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li>Home</li>
+                <li>Our Fragrances</li>
+                <li>About</li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h4>FOLLOW US</h4>
+            <div style="font-size: 20px; gap: 10px; display: flex;">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-tiktok"></i>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>PAYMENT METHODS</h4>
+            <p style="font-size: 12px;">BCA | Mandiri | BNI | BRI</p>
+        </div>
+    </footer>
+
+</body>
+</html>
