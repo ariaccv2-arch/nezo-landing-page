@@ -371,6 +371,24 @@
     transform: scale(1.04);
   }
 
+  .product-card-small-img {
+    position: absolute;
+    bottom: 32%;
+    right: 10%;
+    width: 84px;
+    height: auto;
+    opacity: 0.32;
+    transform: scale(0.7);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .product-card:hover .product-card-small-img {
+    opacity: 0.5;
+    transform: scale(0.78);
+  }
+
   .product-card-overlay {
     position: absolute;
     inset: 0;
@@ -1056,6 +1074,7 @@
     <!-- Fresh Pulse -->
     <div class="product-card reveal">
       <div class="product-card-bg" style="background: linear-gradient(135deg, #0a1f10 0%, #1a3d1e 40%, #0f2a14 100%);">
+        <img class="product-card-img" src="img/fresh-pulse.jpeg" alt="Fresh Pulse" />
         <!-- <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:140px;opacity:0.9" viewBox="0 0 140 220" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="52" y="10" width="36" height="28" rx="4" fill="#0a1510"/>
           <rect x="58" y="38" width="24" height="18" fill="#4a9c5a" opacity="0.5"/>
@@ -1090,6 +1109,7 @@
     <!-- Ocean Breeze -->
     <div class="product-card reveal">
       <div class="product-card-bg" style="background: linear-gradient(135deg, #050f1f 0%, #0a2040 50%, #071525 100%);">
+        <img class="product-card-img" src="img/ocean-breeze.jpeg" alt="Ocean Breeze" />
         <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:140px;opacity:0.9" viewBox="0 0 140 220" fill="none">
           <rect x="52" y="10" width="36" height="28" rx="4" fill="#05101a"/>
           <rect x="58" y="38" width="24" height="18" fill="#4a7a9c" opacity="0.5"/>
@@ -1122,6 +1142,7 @@
     <!-- Rose Elixir -->
     <div class="product-card reveal">
       <div class="product-card-bg" style="background: linear-gradient(135deg, #1f0a12 0%, #3d1525 50%, #2a0f1a 100%);">
+        <img class="product-card-img" src="img/rose-elixir.jpeg" alt="Rose Elixir" />
         <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:140px;opacity:0.9" viewBox="0 0 140 220" fill="none">
           <rect x="52" y="10" width="36" height="28" rx="4" fill="#1a050f"/>
           <rect x="58" y="38" width="24" height="18" fill="#9c4a6a" opacity="0.5"/>
@@ -1152,6 +1173,7 @@
     <!-- Scandal -->
     <div class="product-card reveal">
       <div class="product-card-bg" style="background: linear-gradient(135deg, #100205 0%, #2a0508 50%, #1a0305 100%);">
+        <img class="product-card-img" src="img/scandal.jpeg" alt="Scandal" />
         <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:140px;opacity:0.9" viewBox="0 0 140 220" fill="none">
           <rect x="52" y="10" width="36" height="28" rx="4" fill="#100205"/>
           <rect x="58" y="38" width="24" height="18" fill="#8c1a1a" opacity="0.5"/>
@@ -1182,6 +1204,7 @@
     <!-- Nightfall -->
     <div class="product-card reveal">
       <div class="product-card-bg" style="background: linear-gradient(135deg, #080512 0%, #150a2a 50%, #0d0820 100%);">
+        <img class="product-card-img" src="img/nightfall.jpeg" alt="Nightfall" />
         <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:140px;opacity:0.9" viewBox="0 0 140 220" fill="none">
           <rect x="52" y="10" width="36" height="28" rx="4" fill="#080512"/>
           <rect x="58" y="38" width="24" height="18" fill="#5a3a9c" opacity="0.5"/>
@@ -1230,14 +1253,7 @@
         </svg> -->
         <div style="position:absolute;top:15%;right:12%;font-size:20px;opacity:0.12;">👑</div>
         <img class="product-card-img" src="img/royal-oud.jpeg" alt="Royal Oud" />
-        <!-- Second bottle hint -->
-        <div style="position:absolute;bottom:35%;right:8%;opacity:0.4;transform:scale(0.7)">
-          <svg width="80" height="130" viewBox="0 0 140 220" fill="none">
-            <rect x="52" y="10" width="36" height="28" rx="4" fill="#0f0a02"/>
-            <rect x="42" y="72" width="56" height="120" rx="6" fill="#c9a84c" opacity="0.15"/>
-            <text x="70" y="140" text-anchor="middle" fill="#e8c97a" font-size="7" font-family="Montserrat" letter-spacing="1" font-weight="700">AURUM</text>
-          </svg>
-        </div>
+        <img class="product-card-small-img" src="img/aurum-luxe.jpeg" alt="Aurum Luxe" />
       </div>
       <div class="product-card-overlay"></div>
       <div class="product-card-content">
